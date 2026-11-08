@@ -181,6 +181,8 @@ The project explores practical MLOps implementation through:
 **Sita Mahalakshmi**
 
 GitHub: [@maha2806](https://github.com/maha2806)
+Streamlit:[@maha2806](https://voyage-analytics-eww.streamlit.app/)
+Gmail:[Sita Mahalakshmi Bharatula ](bhsita18@gmail.com)
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
