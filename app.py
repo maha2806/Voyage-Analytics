@@ -746,7 +746,7 @@ with st.sidebar:
     )
 
     st.caption(
-        "2026 | Academic Demonstration"
+        "2026 | By : Sita Bharatula "
     )
 
 
