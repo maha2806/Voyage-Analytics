@@ -26,15 +26,15 @@ st.set_page_config(
 # CUSTOM CSS - MINIMAL, ELEGANT AND PROFESSIONAL
 # -----------------------------------------------------------------------------
 
+
 st.markdown(
     """
     <style>
 
-    /* GLOBAL APPLICATION */
-
+    /* GLOBAL BACKGROUND */
     .stApp {
-        background-color: #f8f8f6;
-        color: #292d32;
+        background-color: #171D29;
+        color: #E6EAF0;
         font-family: "Inter", "Segoe UI", sans-serif;
     }
 
@@ -45,26 +45,25 @@ st.markdown(
     }
 
     /* SIDEBAR */
-
     [data-testid="stSidebar"] {
-        background-color: #f0f0ed;
-        border-right: 1px solid #e3e3de;
+        background-color: #111722;
+        border-right: 1px solid #303B4B;
     }
 
     [data-testid="stSidebar"] h1 {
-        color: #263747 !important;
-        font-size: 1.45rem;
+        color: #F1F4F8 !important;
+        font-size: 1.4rem;
         font-weight: 750;
     }
 
     [data-testid="stSidebar"] p,
     [data-testid="stSidebar"] label,
     [data-testid="stSidebar"] span {
-        color: #555e68;
+        color: #B5C0CF;
     }
 
     [data-testid="stSidebar"] hr {
-        border-color: #d8d9d5;
+        border-color: #354153;
     }
 
     [data-testid="stSidebar"] [role="radiogroup"] {
@@ -76,10 +75,9 @@ st.markdown(
         border-radius: 8px;
     }
 
-    /* MAIN HEADINGS AND TEXT */
-
+    /* MAIN TEXT */
     h1, h2, h3 {
-        color: #252a30 !important;
+        color: #F1F4F8 !important;
         letter-spacing: -0.5px;
     }
 
@@ -91,54 +89,53 @@ st.markdown(
         font-weight: 650 !important;
     }
 
-    [data-testid="stMain"] p {
-        color: #555e68;
+    [data-testid="stMain"] p,
+    [data-testid="stMain"] label {
+        color: #C0CAD7;
     }
 
-    /* HERO SECTION */
-
+    /* HERO */
     .hero {
         padding: 2.2rem 2.4rem;
         border-radius: 14px;
-        background: #e9edf0;
-        border: 1px solid #dce2e6;
+        background: linear-gradient(120deg, #202D40, #304D68);
+        border: 1px solid #40546B;
         margin-bottom: 2rem;
     }
 
     .hero h1 {
-        color: #263747 !important;
+        color: #FFFFFF !important;
         font-size: 2.6rem;
         font-weight: 750;
         margin-bottom: 0.5rem;
     }
 
     .hero p {
-        color: #586b7a !important;
+        color: #D2DFEB !important;
         font-size: 1.05rem;
         margin-bottom: 0;
     }
 
-    /* HOME PAGE FEATURE CARDS */
-
+    /* FEATURE CARDS */
     .feature-card {
-        background: #ffffff;
-        border: 1px solid #e6e7e5;
+        background: #222C3B;
+        border: 1px solid #354458;
         border-radius: 12px;
         padding: 1.4rem;
         min-height: 185px;
         height: 100%;
-        box-shadow: 0 2px 8px rgba(30, 45, 55, 0.035);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     .feature-card h3 {
-        color: #293b4d !important;
+        color: #F1F4F8 !important;
         font-size: 1.22rem;
         margin-top: 0;
         margin-bottom: 0.8rem;
     }
 
     .feature-card p {
-        color: #64717c !important;
+        color: #B8C5D4 !important;
         font-size: 0.96rem;
         line-height: 1.65;
         margin-bottom: 0;
@@ -150,24 +147,22 @@ st.markdown(
     }
 
     /* INFORMATION BANNER */
-
     .notice-card {
-        background: #edf1f3;
-        border-left: 4px solid #607d91;
+        background: #26364A;
+        border-left: 4px solid #8AAAC8;
         padding: 16px 20px;
         border-radius: 8px;
-        color: #344b5e;
+        color: #E5EDF5;
         font-weight: 500;
         margin-top: 1rem;
     }
 
     /* BUTTONS */
-
     .stButton button,
     .stFormSubmitButton button {
-        background-color: #344b5e;
-        color: #ffffff !important;
-        border: 1px solid #344b5e;
+        background: #496681;
+        color: #FFFFFF !important;
+        border: 1px solid #607F9C;
         border-radius: 8px;
         padding: 0.55rem 1.2rem;
         font-weight: 600;
@@ -176,56 +171,67 @@ st.markdown(
 
     .stButton button:hover,
     .stFormSubmitButton button:hover {
-        background-color: #25394b;
-        border-color: #25394b;
-        color: #ffffff !important;
+        background: #5A7895;
+        border-color: #86A5C1;
+        color: #FFFFFF !important;
     }
 
-    /* INPUT FIELDS */
-
+    /* INPUTS */
     .stTextInput input,
-    .stNumberInput input {
+    .stNumberInput input,
+    .stDateInput input,
+    [data-baseweb="select"] > div {
+        background-color: #222C3B !important;
+        color: #F1F4F8 !important;
+        border: 1px solid #46566A !important;
         border-radius: 8px;
     }
 
-    [data-baseweb="select"] {
-        border-radius: 8px;
+    input::placeholder {
+        color: #91A0B2 !important;
+    }
+
+    /* SELECTBOX DROPDOWN */
+    [data-baseweb="popover"],
+    [data-baseweb="menu"] {
+        background-color: #222C3B !important;
+        color: #F1F4F8 !important;
+    }
+
+    [role="option"] {
+        color: #F1F4F8 !important;
     }
 
     /* SLIDERS */
-
     [data-testid="stSlider"] {
         padding-top: 0.5rem;
     }
 
-    /* ALERTS AND TABLES */
-
+    /* ALERTS */
     [data-testid="stAlert"] {
         border-radius: 9px;
     }
 
+    /* DATAFRAME */
     [data-testid="stDataFrame"] {
-        border: 1px solid #e0e3e5;
+        border: 1px solid #354458;
         border-radius: 10px;
         overflow: hidden;
     }
 
     /* DIVIDERS */
-
     hr {
-        border-color: #e1e3e3;
+        border-color: #354153;
     }
 
     /* FOOTER */
-
     .footer-note {
-        color: #87919a;
+        color: #95A4B5;
         font-size: 0.85rem;
         margin-top: 1.2rem;
     }
 
-    /* RESPONSIVE SPACING */
-
+    /* RESPONSIVE */
     @media (max-width: 768px) {
         .hero {
             padding: 1.4rem;
@@ -244,7 +250,6 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
 
 # -----------------------------------------------------------------------------
 # MODEL AND DATA LOADING
