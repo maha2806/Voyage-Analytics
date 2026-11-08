@@ -21,27 +21,47 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+      /* Main application */
       .stApp {
           background-color: #f7f9fc;
+          color: #26364a;
       }
 
       .block-container {
           padding-top: 2rem;
           padding-bottom: 2.5rem;
-          max-width: 1400px;
       }
 
+      /* Sidebar */
       [data-testid="stSidebar"] {
           background-color: #edf2f8;
           border-right: none;
       }
 
-      [data-testid="stMain"] {
-          background-color: #f7f9fc;
+      [data-testid="stSidebar"] * {
+          color: #26364a;
       }
 
+      /* Main content text */
+      [data-testid="stMain"] {
+          color: #26364a;
+      }
+
+      [data-testid="stMain"] h1,
+      [data-testid="stMain"] h2,
+      [data-testid="stMain"] h3 {
+          color: #192d46;
+      }
+
+      [data-testid="stMain"] p,
+      [data-testid="stMain"] label,
+      [data-testid="stMain"] .stMarkdown {
+          color: #40516a;
+      }
+
+      /* Preserve the original blue hero banner */
       .hero {
-          padding: 1.8rem 2rem;
+          padding: 1.6rem 1.8rem;
           border-radius: 18px;
           background: linear-gradient(120deg, #14243b, #24577a);
           color: white;
@@ -49,12 +69,12 @@ st.markdown(
       }
 
       .hero h1 {
-          color: white;
+          color: white !important;
           margin-bottom: .35rem;
       }
 
       .hero p {
-          color: #e2edf7;
+          color: #e2edf7 !important;
           margin-bottom: 0;
       }
 
@@ -63,9 +83,9 @@ st.markdown(
           font-size: .9rem;
       }
 
-      [data-testid="stDataFrame"] {
-          border-radius: 12px;
-          overflow: hidden;
+      /* Remove the sidebar's vertical separator */
+      [data-testid="stSidebar"] {
+          border-right: 0 !important;
       }
     </style>
     """,
