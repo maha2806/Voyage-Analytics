@@ -18,22 +18,60 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-
 st.markdown(
     """
     <style>
-      .block-container {padding-top: 2rem; padding-bottom: 2.5rem;}
-      [data-testid="stSidebar"] {background: #f3f6fb;}
-      .hero {padding: 1.6rem 1.8rem; border-radius: 18px;
-             background: linear-gradient(120deg,#14243b,#24577a); color: white;
-             margin-bottom: 1.2rem;}
-      .hero h1 {color: white; margin-bottom: .35rem;}
-      .hero p {color: #e2edf7; margin-bottom: 0;}
-      .small-note {color: #64748b; font-size: .9rem;}
+      .stApp {
+          background-color: #f7f9fc;
+      }
+
+      .block-container {
+          padding-top: 2rem;
+          padding-bottom: 2.5rem;
+          max-width: 1400px;
+      }
+
+      [data-testid="stSidebar"] {
+          background-color: #edf2f8;
+          border-right: none;
+      }
+
+      [data-testid="stMain"] {
+          background-color: #f7f9fc;
+      }
+
+      .hero {
+          padding: 1.8rem 2rem;
+          border-radius: 18px;
+          background: linear-gradient(120deg, #14243b, #24577a);
+          color: white;
+          margin-bottom: 1.2rem;
+      }
+
+      .hero h1 {
+          color: white;
+          margin-bottom: .35rem;
+      }
+
+      .hero p {
+          color: #e2edf7;
+          margin-bottom: 0;
+      }
+
+      .small-note {
+          color: #64748b;
+          font-size: .9rem;
+      }
+
+      [data-testid="stDataFrame"] {
+          border-radius: 12px;
+          overflow: hidden;
+      }
     </style>
     """,
     unsafe_allow_html=True,
 )
+
 
 
 @st.cache_resource(show_spinner="Loading flight prediction model...")
